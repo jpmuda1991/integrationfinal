@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_two"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MatchDetailFragment">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card"
+        android:layout_width="0dp"
+        app:cardBackgroundColor="@color/white_trans"
+        app:cardCornerRadius="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:layout_height="0dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Tournament: "
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tournament_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/name_txt"
+                    app:layout_constraintTop_toTopOf="@+id/name_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/country_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Country: "
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/name_txt"
+                    app:layout_constraintTop_toBottomOf="@id/tournament_name"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/country_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/country_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/country_txt"
+                    app:layout_constraintTop_toTopOf="@id/country_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/city_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="City: "
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/name_txt"
+                    app:layout_constraintTop_toBottomOf="@id/country_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/city_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text=""
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/city_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/city_txt"
+                    app:layout_constraintTop_toTopOf="@id/city_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/team_or_plyr_one_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="date: "
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/name_txt"
+                    app:layout_constraintTop_toBottomOf="@id/city_txt" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/players_one_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:layout_constraintStart_toEndOf="@id/team_or_plyr_one_txt"
+                    app:layout_constraintBottom_toBottomOf="@id/team_or_plyr_one_txt"
+                    app:layout_constraintTop_toTopOf="@id/team_or_plyr_one_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/round_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Round: "
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/name_txt"
+                    app:layout_constraintTop_toBottomOf="@id/team_or_plyr_one_txt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/round_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:layout_constraintStart_toEndOf="@id/round_txt"
+                    app:layout_constraintBottom_toBottomOf="@id/round_txt"
+                    app:layout_constraintTop_toTopOf="@id/round_txt" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/flag_img_one"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/round_txt"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/player_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="@id/flag_img_one"
+                    app:layout_constraintTop_toBottomOf="@id/flag_img_one" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/flag_img_one_sp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/player_one"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/player_one_sp_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="@id/flag_img_one_sp"
+                    app:layout_constraintTop_toBottomOf="@id/flag_img_one_sp" />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/flag_img_two"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/round_txt"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/player_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/flag_img_two"
+                    app:layout_constraintTop_toBottomOf="@id/flag_img_one" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/flag_img_two_sp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/player_two"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/player_two_sp_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/flag_img_two_sp"
+                    app:layout_constraintTop_toBottomOf="@id/flag_img_one_sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/breaking_points_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one_sp_name"
+                    app:layout_constraintTop_toBottomOf="@id/player_one_sp_name"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/breaking_points_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Breakpoints Won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/breaking_points_two"
+                    app:layout_constraintStart_toEndOf="@id/breaking_points_one"
+                    app:layout_constraintBottom_toBottomOf="@id/breaking_points_one"
+                    app:layout_constraintTop_toTopOf="@id/breaking_points_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/breaking_points_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two_sp_name"
+                    app:layout_constraintTop_toBottomOf="@id/player_two_sp_name"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/double_faults_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/breaking_points_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/double_fault_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Double faults"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/double_faults_two"
+                    app:layout_constraintStart_toEndOf="@id/double_faults_one"
+                    app:layout_constraintBottom_toBottomOf="@id/double_faults_one"
+                    app:layout_constraintTop_toTopOf="@id/double_faults_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/double_faults_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/breaking_points_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/double_faults_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="First Serve Points won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/first_serve_won_two"
+                    app:layout_constraintStart_toEndOf="@id/first_serve_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/first_serve_won_one"
+                    app:layout_constraintTop_toTopOf="@id/first_serve_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/double_faults_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_succ_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/first_serve_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_succ_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="First Serve Successful"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/first_serve_succ_two"
+                    app:layout_constraintStart_toEndOf="@id/first_serve_succ_one"
+                    app:layout_constraintBottom_toBottomOf="@id/first_serve_succ_one"
+                    app:layout_constraintTop_toTopOf="@id/first_serve_succ_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first_serve_succ_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/first_serve_won_two"
+                    />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/games_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/first_serve_succ_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/games_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Games won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/games_won_two"
+                    app:layout_constraintStart_toEndOf="@id/games_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/games_won_one"
+                    app:layout_constraintTop_toTopOf="@id/games_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/games_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/first_serve_succ_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_games_row_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/games_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_games_row_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Max Games in a row"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/max_games_row_two"
+                    app:layout_constraintStart_toEndOf="@id/max_games_row_one"
+                    app:layout_constraintBottom_toBottomOf="@id/max_games_row_one"
+                    app:layout_constraintTop_toTopOf="@id/max_games_row_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_games_row_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/games_won_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_points_row_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/max_games_row_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_points_row_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Max points in a row"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/max_points_row_two"
+                    app:layout_constraintStart_toEndOf="@id/max_points_row_one"
+                    app:layout_constraintBottom_toBottomOf="@id/max_points_row_one"
+                    app:layout_constraintTop_toTopOf="@id/max_points_row_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/max_points_row_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/max_games_row_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/points_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/max_points_row_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/points_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Points won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/points_won_two"
+                    app:layout_constraintStart_toEndOf="@id/points_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/points_won_one"
+                    app:layout_constraintTop_toTopOf="@id/points_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/points_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/max_points_row_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/points_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Second Serve Points won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/second_serve_won_two"
+                    app:layout_constraintStart_toEndOf="@id/second_serve_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/second_serve_won_one"
+                    app:layout_constraintTop_toTopOf="@id/second_serve_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/points_won_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_succ_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/second_serve_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_succ_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Second Serve Successful"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/second_serve_succ_two"
+                    app:layout_constraintStart_toEndOf="@id/second_serve_succ_one"
+                    app:layout_constraintBottom_toBottomOf="@id/second_serve_succ_one"
+                    app:layout_constraintTop_toTopOf="@id/second_serve_succ_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second_serve_succ_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/second_serve_won_two"
+                    />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_games_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/second_serve_succ_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_games_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Service games won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/service_games_won_two"
+                    app:layout_constraintStart_toEndOf="@id/service_games_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/service_games_won_one"
+                    app:layout_constraintTop_toTopOf="@id/service_games_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_games_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/second_serve_succ_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_lost_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/service_games_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_lost_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Service points lost"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/service_points_lost_two"
+                    app:layout_constraintStart_toEndOf="@id/service_points_lost_one"
+                    app:layout_constraintBottom_toBottomOf="@id/service_points_lost_one"
+                    app:layout_constraintTop_toTopOf="@id/service_points_lost_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_lost_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/service_games_won_two"
+                    />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/service_points_lost_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Service points won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/service_points_won_two"
+                    app:layout_constraintStart_toEndOf="@id/service_points_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/service_points_won_one"
+                    app:layout_constraintTop_toTopOf="@id/service_points_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/service_points_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/service_points_lost_two"
+                    />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tiebreaks_won_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/player_one"
+                    app:layout_constraintTop_toBottomOf="@id/service_points_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tiebreaks_won_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="Tiebreaks won"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tiebreaks_won_two"
+                    app:layout_constraintStart_toEndOf="@id/tiebreaks_won_one"
+                    app:layout_constraintBottom_toBottomOf="@id/tiebreaks_won_one"
+                    app:layout_constraintTop_toTopOf="@id/tiebreaks_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tiebreaks_won_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/player_two"
+                    app:layout_constraintTop_toBottomOf="@id/service_points_won_two"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/final_results_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:gravity="center"
+                    android:text="Final Results"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textSize="@dimen/_16ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tiebreaks_won_one"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/final_results"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/final_results_text"
+                    app:layout_constraintStart_toStartOf="@id/final_results_text"
+                    app:layout_constraintTop_toBottomOf="@id/final_results_text"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
