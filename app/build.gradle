@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.tennis.cli.tenn.cus.tennisapp"
+        applicationId "com.tennis.cli.tenn.custm.tennisapp"
         minSdk 21
         targetSdk 32
         versionCode 1

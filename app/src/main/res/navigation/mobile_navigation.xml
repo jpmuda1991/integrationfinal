@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/nav_rankings"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.RankingFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.RankingFragment"
         android:label="Top Rankings"
         tools:layout="@layout/fragment_ranking" >
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/nav_players"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.PlayersFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.PlayersFragment"
         android:label="Players"
         tools:layout="@layout/fragment_players" >
         <action
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/nav_tournaments"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.TournamentFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.TournamentFragment"
         android:label="Tournaments"
         tools:layout="@layout/fragment_tournament" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.ProfileFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/sameCtyPlayersFragment"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.SameCtyPlayersFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.SameCtyPlayersFragment"
         android:label="fragment_same_cty_players"
         tools:layout="@layout/fragment_same_cty_players" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/matchDetailFragment"
-        android:name="com.tennis.cli.tenn.cus.tennisapp.Fragments.MatchDetailFragment"
+        android:name="com.tennis.cli.tenn.custm.tennisapp.Fragments.MatchDetailFragment"
         android:label="Match Details"
         tools:layout="@layout/fragment_match_detail" >
         <action
